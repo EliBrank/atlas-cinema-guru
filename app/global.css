@@ -2,6 +2,18 @@
 
 @theme {
   --color-primary-dark: #00003C;
+  --color-primary-dark-tint: #000061;
+  --color-primary-light: #FFF;
   --color-accent: #1ED2AF;
-  --color-accent-light: #54F4D0;
+  --color-accent-tint: #54F4D0;
+}
+
+@layer components {
+  .textField {
+    @apply [appearance:textfield] rounded-full bg-primary-dark-tint px-5 py-1.5 outline-2 outline-accent focus-visible:outline-primary-light mt-2
+  }
+
+  .toggleButton {
+    @apply rounded-full px-5 py-1.5 outline-2 outline-accent focus-visible:outline-primary-light cursor-pointer
+  }
 }

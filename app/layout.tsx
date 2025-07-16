@@ -1,4 +1,6 @@
 import "@/app/global.css";
+import { Header } from "@/components/Header";
+import { Sidebar } from "@/components/Sidebar";
 import { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 
@@ -18,17 +20,14 @@ const poppins = Poppins({
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={poppins.className}>
-      <body className={`h-100  bg-primary-dark text-white antialiased`}>
-        <header className="flex h-16 items-center bg-accent">
-          <div className="wrapper px-8">
-            <h1 className="font-bold">Cinema Guru</h1>
+      <body className={`flex h-screen flex-col bg-primary-dark text-white antialiased`}>
+        <Header />
+        <main className="flex flex-grow flex-row">
+          <Sidebar />
+          <div className="w-full p-12">
+            {children}
           </div>
-        </header>
-        <div className="sidebar">
-          <nav>
-          </nav>
-        </div>
-        {children}
+        </main>
       </body>
     </html>
   );
