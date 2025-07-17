@@ -13,7 +13,7 @@
     @apply [appearance:textfield] rounded-full bg-primary-dark-tint px-5 py-1.5 outline-2 outline-accent focus-visible:outline-primary-light mt-2
   }
 
-  .toggleButton {
-    @apply rounded-full px-5 py-1.5 outline-2 outline-accent focus-visible:outline-primary-light cursor-pointer
+  .genreButton {
+    @apply rounded-full px-5 py-1.5 outline-2 outline-accent focus-visible:outline-primary-light cursor-pointer text-nowrap
   }
 }

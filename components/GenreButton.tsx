@@ -3,7 +3,7 @@
 export const GenreButton = ({ genreName }: { genreName: string }) => {
   return (
     <div>
-      <button className="toggleButton">
+      <button className="genreButton">
         {genreName}
       </button>
     </div>

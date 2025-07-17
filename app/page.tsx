@@ -33,7 +33,7 @@ export default async function Page({ searchParams }: {
     <div className="flex h-100 w-full flex-col gap-8">
       <QueryOptions />
       <FilmGrid films={films} />
-      <div className="flex justify-center">
+      <div className="flex justify-center pb-8">
         <PageButtons />
       </div>
     </div>
