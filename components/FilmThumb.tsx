@@ -4,10 +4,10 @@ import { SaveButtons } from "./SaveButtons";
 export const FilmThumb = ({ film, size }: { film: any; size: number }) => {
   return (
     <div className="group relative size-fit">
-      <div className="absolute top-0 h-8 w-full p-4 opacity-0 transition-opacity group-hover:opacity-100">
+      <div className="absolute top-0 h-8 w-full p-4 opacity-0 group-hover:opacity-100">
         <SaveButtons film={film} />
       </div>
-      <div className="absolute bottom-0 h-4/9 w-full rounded-b-2xl bg-primary-dark-tint p-4 opacity-0 transition-opacity group-hover:opacity-100">
+      <div className="absolute bottom-0 h-4/9 w-full rounded-b-2xl bg-primary-dark-tint p-4 opacity-0 group-hover:opacity-100">
         <h3>{`${film.title} (${film.released})`}</h3>
         <p className="mt-2 line-clamp-2 text-sm">
           {film.synopsis}

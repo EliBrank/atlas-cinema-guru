@@ -22,6 +22,7 @@ export default async function Page({
   const hasPrevPage = currentPage > 1;
   return (
     <div className="flex h-100 w-full flex-col gap-8">
+      <h2 className="text-center text-4xl font-bold">Favorites</h2>
       <FilmGrid films={favorites}></FilmGrid>
       <div className="flex justify-center pb-8">
         <PageButtons

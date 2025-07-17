@@ -10,18 +10,19 @@ type IconName = keyof typeof iconMap;
 
 type Props = {
   iconName: IconName;
-  isHovered: boolean;
 }
 
-export const SidebarItem = ({ iconName, isHovered }: Props) => {
+export const SidebarItem = ({ iconName }: Props) => {
   const IconComponent = iconMap[iconName];
 
   return (
-    <div className="flex w-[fit-content] cursor-pointer items-center gap-2 text-primary-light">
-      <IconComponent className="h-6 w-6" />
-      {isHovered && (
-        <p className="text-sm">{iconName}</p>
-      )}
+    <div className="flex items-center gap-4 object-contain">
+      <div className="flex-0 flex-shrink-0">
+        <IconComponent className="h-6 w-6 p-0" />
+      </div>
+      <span className="hidden group-hover/sidebar:inline">
+        {iconName}
+      </span>
     </div>
   );
 }
