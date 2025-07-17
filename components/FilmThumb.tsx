@@ -17,7 +17,7 @@ export const FilmThumb = ({ film, size }: { film: any; size: number }) => {
         </div>
       </div>
       <Image
-        src={film.image}
+        src={film.image || null}
         alt={film.title}
         width={size}
         height={size}

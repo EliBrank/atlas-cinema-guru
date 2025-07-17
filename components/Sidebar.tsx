@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SidebarActivities } from "./SidebarActivities";
 import { SidebarItem } from "./SidebarItem";
+import Link from "next/link";
 
 export const Sidebar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,9 +15,15 @@ export const Sidebar = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <nav className="mb-6 flex flex-col gap-6 px-4">
-        <SidebarItem iconName="Home" isHovered={isHovered} />
-        <SidebarItem iconName="Favorites" isHovered={isHovered} />
-        <SidebarItem iconName="Watch Later" isHovered={isHovered} />
+        <Link href={'/'}>
+          <SidebarItem iconName="Home" isHovered={isHovered} />
+        </Link>
+        <Link href={'/favorites'}>
+          <SidebarItem iconName="Favorites" isHovered={isHovered} />
+        </Link>
+        <Link href={'/watch-later'}>
+          <SidebarItem iconName="Watch Later" isHovered={isHovered} />
+        </Link>
       </nav>
       {isHovered && (
         <SidebarActivities />
