@@ -7,6 +7,9 @@ export const SidebarActivities = () => {
       <div className="flex flex-col gap-4">
         <SidebarActivity />
         <SidebarActivity />
+        <SidebarActivity />
+        <SidebarActivity />
+        <SidebarActivity />
       </div>
     </div>
   );

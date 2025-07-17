@@ -10,16 +10,16 @@ type IconName = keyof typeof iconMap;
 
 type Props = {
   iconName: IconName;
-  hovered: boolean;
+  isHovered: boolean;
 }
 
-export const SidebarItem = ({ iconName, hovered }: Props) => {
+export const SidebarItem = ({ iconName, isHovered }: Props) => {
   const IconComponent = iconMap[iconName];
 
   return (
     <div className="flex w-[fit-content] cursor-pointer items-center gap-2 text-primary-light">
       <IconComponent className="h-6 w-6" />
-      {hovered && (
+      {isHovered && (
         <p className="text-sm">{iconName}</p>
       )}
     </div>

@@ -5,11 +5,11 @@ import { YearFilter } from "./YearFilter";
 export const QueryOptions = () => {
   return (
     <div className="flex w-full justify-between">
-      <div className="searchAndYearFilter flex w-1/3 flex-col gap-4">
+      <div className="searchAndYearFilter flex w-1/4 flex-col gap-4">
         <SearchFilter />
         <YearFilter />
       </div>
-      <div className="w-1/3">
+      <div className="w-1/4">
         <GenreFilter />
       </div>
     </div>

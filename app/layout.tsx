@@ -22,9 +22,9 @@ export default function RootLayout({ children }: Props) {
     <html lang="en" className={poppins.className}>
       <body className={`flex h-screen flex-col bg-primary-dark text-white antialiased`}>
         <Header />
-        <main className="flex flex-grow flex-row">
+        <main className="flex flex-grow flex-row overflow-hidden">
           <Sidebar />
-          <div className="w-full p-12">
+          <div className="w-full flex-1 overflow-y-auto p-12">
             {children}
           </div>
         </main>
